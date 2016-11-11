@@ -1,10 +1,14 @@
 var webpack = require('webpack');
+var path = require('path');
 
 module.exports = {
-  entry: ['./src/browser/main.js'],
+  entry: [
+    'webpack-dev-server/client?http://localhost:8080',
+    './src/browser/main.js'
+  ],
   output: {
     filename: 'bundle.js',
-    path: __dirname
+    path: path.resolve(__dirname, 'build')
   },
   module: {
     loaders: [
@@ -22,6 +26,10 @@ module.exports = {
     extensions: ['', '.js', '.jsx']
   },
   devServer: {
-    progress: true
+    contentBase: './build/',
+    progress: false,
+    stats: {
+      colors: true
+    }
   }
 };

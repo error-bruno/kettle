@@ -4,5 +4,5 @@ import Hello from "./app/hello";
 
 ReactDOM.render(
   <Hello name="World" />,
-  document.body
+  document.querySelector('#app')
 );

@@ -10,11 +10,7 @@ gulp.task('webpack-dev-server', function(callback) {
   // Start a webpack-dev-server
   var compiler = webpack(webpackConfig);
 
-  new WebpackDevServer(compiler, {
-    stats: {
-      colors: true
-    }
-  }).listen(8080, "localhost", function(err) {
+  new WebpackDevServer(compiler, webpackConfig.devServer).listen(8080, "localhost", function(err) {
     if(err) throw new gutil.PluginError("webpack-dev-server", err);
     // Server listening
     gutil.log("[webpack-dev-server --progress --colors]", "http://localhost:8080/webpack-dev-server/index.html");
