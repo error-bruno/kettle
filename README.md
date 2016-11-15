@@ -5,4 +5,4 @@ yarn install
 gulp
 ```
 
-Open http://localhost:8080/webpack-dev-server/bundle
+Open http://localhost:8080/
