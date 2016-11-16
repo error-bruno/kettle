@@ -1,5 +1,6 @@
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
+import createLogger from 'redux-logger';
 import appReducer from '../redux/App.reducer';
 
 const promiseMiddleware = ({ dispatch }) => next => (action) => {
@@ -21,14 +22,13 @@ const promiseMiddleware = ({ dispatch }) => next => (action) => {
   return promise.then(onFulfilled, onRejected);
 };
 
-function logger({ getState }) {
-  return next => (action) => {
-    console.log('will dispatch', action);
-    const returnValue = next(action);
-    console.log('state after dispatch', getState());
-    return returnValue;
-  };
-}
+// In future, make sure we only apply middleware to dev
+const logger = createLogger({
+  collapsed: true,
+  diff: true,
+  // Convert immutable to JSON.
+  stateTransformer: state => JSON.parse(JSON.stringify(state))
+});
 
 const middlewares = [
   thunk,
