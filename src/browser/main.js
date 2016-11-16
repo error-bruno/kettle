@@ -1,8 +1,16 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import Hello from "./app/hello";
+/* eslint-disable react/jsx-filename-extension */
+// The only file we won't use JSX for.
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import AppContainer from './containers/App.container';
+import configureStore from '../plumbing/configureStore';
+
+const store = configureStore();
 
 ReactDOM.render(
-  <Hello name="World" />,
+  <Provider store={store}>
+    <AppContainer name="World" />
+  </Provider>,
   document.querySelector('#app')
 );
