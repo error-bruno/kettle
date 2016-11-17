@@ -2,9 +2,9 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { mount } from 'enzyme';
 import { expect } from 'chai';
-import AppContainer from '../src/browser/containers/App.container';
-import AppComponent from '../src/browser/components/App.component';
-import configureStore from '../src/plumbing/configureStore';
+import AppContainer from './App.container';
+import AppComponent from './App.react';
+import configureStore from '../../plumbing/configureStore';
 
 const store = configureStore(false);
 
