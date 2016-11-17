@@ -5,7 +5,7 @@ import initializeStore from '../../redux/App.actions';
 
 function mapStateToProps(state) {
   return {
-    isInitialized: state.get('initialized')
+    isInitialized: state.App.get('initialized')
   };
 }
 
