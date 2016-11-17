@@ -28,8 +28,10 @@
     "eslint-plugin-jsx-a11y": "^2.2.3",
     "eslint-plugin-react": "^6.0.0",
     "gulp": "^3.9.1",
+    "gulp-eslint": "^3.0.1",
     "gulp-util": "^3.0.7",
     "node-libs-browser": "^1.0.0",
+    "redux-logger": "^2.7.4",
     "webpack": "^1.13.3",
     "webpack-dev-server": "^1.16.2"
   },

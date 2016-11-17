@@ -1,10 +1,18 @@
 import gulp from 'gulp';
 import gutil from 'gulp-util';
+import eslint from 'gulp-eslint';
 import webpack from 'webpack';
 import WebpackDevServer from 'webpack-dev-server';
 import webpackConfig from './webpack.config';
 
 gulp.task('default', ['webpack-dev-server']);
+
+gulp.task('lint', () =>
+  gulp.src(['./src/**/*.js', './src/**/*.jsx', '!node_modules/**'])
+    .pipe(eslint())
+    .pipe(eslint.format())
+    .pipe(eslint.failAfterError())
+);
 
 gulp.task('webpack-dev-server', () => {
   // Start a webpack-dev-server

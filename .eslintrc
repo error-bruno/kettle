@@ -11,7 +11,7 @@
     "no-nested-ternary": 0,
     "import/no-extraneous-dependencies":
       ["error", {
-          "devDependencies": ["**/gulpfile.babel.js"]
+          "devDependencies": ["**/gulpfile.babel.js", "**/src/plumbing/configureStore.js"]
         }
       ]
   },
