@@ -32,11 +32,11 @@ const logger = createLogger({
 
 const middlewares = [
   thunk,
-  promiseMiddleware,
-  logger
+  promiseMiddleware
 ];
 
-export default function configureStore() {
+export default function configureStore(enableLogging = true) {
+  if (enableLogging) middlewares.push(logger);
   return createStore(
     appReducer,
     applyMiddleware(...middlewares),

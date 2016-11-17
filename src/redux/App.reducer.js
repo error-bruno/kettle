@@ -4,7 +4,7 @@ const initialState = Map({
   initialized: false
 });
 
-export default function reducer(state = initialState, action) {
+export default function reducer(state = initialState, action = {}) {
   switch (action.type) {
     case 'INIT':
       return state.set('initialized', true);
