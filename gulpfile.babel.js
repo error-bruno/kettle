@@ -38,5 +38,15 @@ gulp.task('webpack-dev-server', () => {
     if (err) throw new gutil.PluginError('webpack-dev-server', err);
     // Server listening
     gutil.log('-=[webpack-dev-server]=-', 'http://localhost:8080');
+    gutil.log([
+      '   \'',
+      '  ;',
+      '   ;',
+      ' `,  .--.',
+      '   ._.-./ ',
+      '   \\/"""\\ ',
+      '   (_____)',
+      ' --=xXXXx=--'
+    ].join('\n'));
   });
 });
