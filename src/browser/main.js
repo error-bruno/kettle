@@ -3,7 +3,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import AppContainer from './containers/App.container';
+import AppContainer from './App/App.container';
 import configureStore from '../plumbing/configureStore';
 
 const store = configureStore();

@@ -1,11 +1,27 @@
 import gulp from 'gulp';
 import gutil from 'gulp-util';
 import eslint from 'gulp-eslint';
+import mocha from 'gulp-mocha';
+import babel from 'babel-core/register';
 import webpack from 'webpack';
 import WebpackDevServer from 'webpack-dev-server';
 import webpackConfig from './webpack.config';
+import _helper from './test/_helper';
 
 gulp.task('default', ['webpack-dev-server']);
+gulp.task('test', ['lint', 'mocha']);
+
+gulp.task('mocha', () =>
+  gulp.src(['./src/**/*.spec.js', './src/**/*.spec.jsx'])
+  .pipe(mocha({
+    compilers: {
+      js: babel
+    },
+    globals: {
+      _helper
+    }
+  }))
+);
 
 gulp.task('lint', () =>
   gulp.src(['./src/**/*.js', './src/**/*.jsx', '!node_modules/**'])

@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import { Map } from 'immutable';
-import appReducer from '../src/redux/App.reducer';
+import appReducer from './App.reducer';
 
 describe('App Tests', () => {
   it('has initial state', () => {

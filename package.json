@@ -18,6 +18,7 @@
     "babel-eslint": "^7.1.0",
     "babel-loader": "^6.2.7",
     "babel-preset-airbnb": "^2.1.1",
+    "babel-register": "^6.18.0",
     "chai": "^3.5.0",
     "chai-immutable": "^1.6.0",
     "enzyme": "^2.6.0",
@@ -31,6 +32,7 @@
     "eslint-plugin-react": "^6.0.0",
     "gulp": "^3.9.1",
     "gulp-eslint": "^3.0.1",
+    "gulp-mocha": "^3.0.1",
     "gulp-util": "^3.0.7",
     "jsdom": "^9.8.3",
     "mocha": "^3.1.2",
@@ -41,7 +43,7 @@
     "webpack-dev-server": "^1.16.2"
   },
   "scripts": {
-    "test": "mocha --compilers js:babel-core/register --require ./test/_helper.js \"test/**/*@(.js|.jsx)\""
+    "test": "mocha --compilers js:babel-core/register --require ./test/_helper.js \"src/**/*@(.spec.js|.spec.jsx)\""
   },
   "description": ""
 }
