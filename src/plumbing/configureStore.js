@@ -1,7 +1,7 @@
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import createLogger from 'redux-logger';
-import appReducer from '../redux/App.reducer';
+import reducer from '../redux/reducer';
 
 const promiseMiddleware = ({ dispatch }) => next => (action) => {
   const { type, payload: promise } = action;
@@ -38,7 +38,7 @@ const middlewares = [
 export default function configureStore(enableLogging = true) {
   if (enableLogging) middlewares.push(logger);
   return createStore(
-    appReducer,
+    reducer,
     applyMiddleware(...middlewares),
   );
 }
