@@ -6,7 +6,7 @@ import AppContainer from './App.container';
 import AppComponent from './App.react';
 import configureStore from '../../plumbing/configureStore';
 
-const store = configureStore(false);
+const store = configureStore();
 
 describe('<AppContainer />', () => {
   const wrapper = mount(
