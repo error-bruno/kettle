@@ -21,9 +21,14 @@ const App = ({ name, initializeStore, isInitialized }) => (
 
 
 App.propTypes = {
+  initializeStore: PropTypes.func.isRequired,
   name: PropTypes.string,
-  initializeStore: PropTypes.func,
   isInitialized: PropTypes.bool
+};
+
+App.defaultProps = {
+  name: 'John',
+  isInitialized: false
 };
 
 export default App;
