@@ -16,13 +16,13 @@ describe('<AppContainer />', () => {
   );
 
   it('should render correctly', () =>
-    expect(wrapper.find(AppComponent).find('p').text()).to.equal('App is not inited')
+    expect(wrapper.find(AppComponent).find('p.init').text()).to.equal('App is not inited')
   );
 
   it('can init the app', () => {
     store.dispatch({
       type: 'INIT'
     });
-    expect(wrapper.find(AppComponent).find('p').text()).to.equal('App is inited');
+    expect(wrapper.find(AppComponent).find('p.init').text()).to.equal('App is inited');
   });
 });

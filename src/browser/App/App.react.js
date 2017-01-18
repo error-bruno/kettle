@@ -1,6 +1,8 @@
 import React, { PropTypes } from 'react';
 import Helmet from 'react-helmet';
 
+require('./App.scss');
+
 const App = ({ name, initializeStore, isInitialized }) => (
   <div>
     <Helmet
@@ -13,9 +15,9 @@ const App = ({ name, initializeStore, isInitialized }) => (
         }
       ]}
     />
-    Hello, {name}!
+    <p className="class-text">Hello, {name}!</p>
     <button onClick={() => initializeStore()}>Init</button>
-    <p>{isInitialized ? 'App is inited' : 'App is not inited'}</p>
+    <p className="init">{isInitialized ? 'App is inited' : 'App is not inited'}</p>
   </div>
 );
 
