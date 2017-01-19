@@ -25,6 +25,7 @@
     "babel-preset-airbnb": "^2.1.1",
     "chai": "^3.5.0",
     "chai-immutable": "^1.6.0",
+    "css-loader": "^0.26.1",
     "enzyme": "^2.6.0",
     "eslint": "^3.2.2",
     "eslint-config-airbnb": "^14.0.0",
@@ -34,15 +35,22 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^3.0.2",
     "eslint-plugin-react": "^6.0.0",
+    "ignore-styles": "^5.0.1",
     "jsdom": "^9.8.3",
     "mocha": "^3.1.2",
+    "node-sass": "^4.3.0",
     "react-addons-test-utils": "^15.4.0",
-    "redux-logger": "^2.7.4"
+    "redux-logger": "^2.7.4",
+    "sass-lint": "^1.10.2",
+    "sass-loader": "^4.1.1",
+    "style-loader": "^0.13.1"
   },
   "scripts": {
-    "test": "mocha --compilers js:babel-core/register --require ./test/_helper.js \"src/**/*@(.spec.js|.spec.jsx)\"",
+    "test": "mocha --require ignore-styles --require ./test/_helper.js \"src/**/*@(.spec.js|.spec.jsx)\" --compilers js:babel-core/register",
     "dev": "node devServer",
     "lint": "eslint './src/**/*.js' './src/**/*.jsx'",
+    "sass-lint": "sass-lint -c ./sass-lint.yml 'src/browser/**/*.scss' -v -q",
+    "tests": "npm run test && npm run lint && npm run sass-lint",
     "build": "rm -rf dist && NODE_ENV=production webpack --config webpack.config.prod.js --progress --profile --colors",
     "start": "npm run build && NODE_ENV=production node prodServer"
   },

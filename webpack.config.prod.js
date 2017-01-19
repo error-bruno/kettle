@@ -34,8 +34,11 @@ module.exports = {
       exclude: /node_modules/,
       loader: 'babel'
     }, {
-      test: /\.json?$/,
-      loader: 'json'
+      test: /.scss$/,
+      loaders: ['style', 'css?sourceMap', 'sass?sourceMap']
     }]
+  },
+  sassLoader: {
+    includePaths: ['src/browser/scss']
   }
 };
