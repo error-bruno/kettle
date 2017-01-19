@@ -38,11 +38,7 @@
     "ignore-styles": "^5.0.1",
     "jsdom": "^9.8.3",
     "mocha": "^3.1.2",
-<<<<<<< 03f4bc3c10876d9c40a5f0248ab426c628f27e71
-=======
-    "node-libs-browser": "^2.0.0",
     "node-sass": "^4.3.0",
->>>>>>> Add Sass to webpack
     "react-addons-test-utils": "^15.4.0",
     "redux-logger": "^2.7.4",
     "sass-lint": "^1.10.2",

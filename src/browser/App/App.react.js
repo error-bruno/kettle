@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import Helmet from 'react-helmet';
 
-require('./App.scss');
+import './App.scss';
 
 const App = ({ name, initializeStore, isInitialized }) => (
   <div>
