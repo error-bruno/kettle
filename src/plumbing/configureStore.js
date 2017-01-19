@@ -22,6 +22,7 @@ const promiseMiddleware = ({ dispatch }) => next => (action) => {
   return promise.then(onFulfilled, onRejected);
 };
 
+
 // In future, make sure we only apply middleware to dev
 const logger = createLogger({
   collapsed: true,
@@ -35,8 +36,10 @@ const middlewares = [
   promiseMiddleware
 ];
 
-export default function configureStore(enableLogging = true) {
-  if (enableLogging) middlewares.push(logger);
+export default function configureStore() {
+  if (process.env.NODE_ENV !== 'production') {
+    middlewares.push(logger);
+  }
   return createStore(
     reducer,
     applyMiddleware(...middlewares),
