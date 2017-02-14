@@ -28,12 +28,12 @@
     "css-loader": "^0.26.1",
     "enzyme": "^2.6.0",
     "eslint": "^3.2.2",
-    "eslint-config-airbnb": "^14.0.0",
+    "eslint-config-airbnb": "^14.1.0",
     "eslint-loader": "^1.1.1",
     "eslint-plugin-babel": "^4.0.0",
     "eslint-plugin-fp": "^2.2.0",
     "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-jsx-a11y": "^3.0.2",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
     "eslint-plugin-react": "^6.0.0",
     "ignore-styles": "^5.0.1",
     "jsdom": "^9.8.3",
@@ -53,6 +53,10 @@
     "tests": "npm run test && npm run lint && npm run sass-lint",
     "build": "rm -rf dist && NODE_ENV=production webpack --config webpack.config.prod.js --progress --profile --colors",
     "start": "npm run build && NODE_ENV=production node prodServer"
+  },
+  "engines": {
+    "node": "5.0.0",
+    "npm": "3.8.7"
   },
   "description": ""
 }
