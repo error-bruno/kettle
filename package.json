@@ -16,7 +16,7 @@
     "react-router": "^3.0.0",
     "redux": "^3.6.0",
     "redux-thunk": "^2.2.0",
-    "webpack": "^2.3.3",
+    "webpack": "^2.4.1",
     "webpack-dev-server": "^2.4.2"
   },
   "devDependencies": {
@@ -27,7 +27,7 @@
     "chai": "^3.5.0",
     "chai-immutable": "^1.6.0",
     "css-loader": "^0.28.0",
-    "enzyme": "^2.6.0",
+    "enzyme": "^2.8.2",
     "eslint": "^3.2.2",
     "eslint-config-airbnb": "^14.1.0",
     "eslint-loader": "^1.1.1",
