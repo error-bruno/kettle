@@ -12,33 +12,43 @@ module.exports = {
     filename: '[name]-[hash].min.js'
   },
   plugins: [
-    new webpack.optimize.OccurenceOrderPlugin(),
     new HtmlWebpackPlugin({
       template: 'build/index.html',
       inject: 'body',
       filename: 'index.html'
     }),
+    new webpack.LoaderOptionsPlugin({
+      minimize: true
+    }),
     new webpack.optimize.UglifyJsPlugin({
-      compressor: {
-        warnings: false,
-        screw_ie8: true
-      }
+      compress: {
+        warnings: false
+      },
+      sourceMap: true
     }),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
     })
   ],
   module: {
-    loaders: [{
+    rules: [{
       test: /\.js?$/,
       exclude: /node_modules/,
-      loader: 'babel'
+      use: [{
+        loader: 'babel-loader'
+      }]
     }, {
-      test: /.scss$/,
-      loaders: ['style', 'css?sourceMap', 'sass?sourceMap']
+      test: /\.scss$/,
+      use: [{
+        loader: 'style-loader'
+      }, {
+        loader: 'css-loader'
+      }, {
+        loader: 'sass-loader',
+        options: {
+          includePaths: ['src/browser/scss']
+        }
+      }]
     }]
-  },
-  sassLoader: {
-    includePaths: ['src/browser/scss']
   }
 };

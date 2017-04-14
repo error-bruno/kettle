@@ -25,23 +25,31 @@ module.exports = {
     })
   ],
   module: {
-    loaders: [{
+    rules: [{
       test: /.jsx?$/,
-      loader: 'babel-loader',
+      use: [{
+        loader: 'babel-loader',
+        query: {
+          presets: ['airbnb', 'react']
+        }
+      }],
       exclude: /node_modules/,
-      query: {
-        presets: ['airbnb', 'react']
-      }
     }, {
-      test: /.scss$/,
-      loaders: ['style', 'css?sourceMap', 'sass?sourceMap']
+      test: /\.scss$/,
+      use: [{
+        loader: 'style-loader'
+      }, {
+        loader: 'css-loader'
+      }, {
+        loader: 'sass-loader',
+        options: {
+          includePaths: ['src/browser/scss']
+        }
+      }]
     }]
   },
-  sassLoader: {
-    includePaths: ['src/browser/scss']
-  },
   resolve: {
-    extensions: ['', '.js', '.jsx']
+    extensions: ['.js', '.jsx']
   },
   devServer: {
     contentBase: './build/',
