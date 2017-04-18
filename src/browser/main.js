@@ -10,7 +10,7 @@ const store = configureStore();
 
 ReactDOM.render(
   <Provider store={store}>
-    <AppContainer name="World" />
+    <AppContainer />
   </Provider>,
   document.querySelector('#app')
 );

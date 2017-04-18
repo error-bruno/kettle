@@ -1,37 +1,33 @@
 import React from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Helmet from 'react-helmet';
-import PropTypes from 'prop-types';
+
+import Navigation from '../Navigation/Navigation.container';
+import Home from '../Home/Home.container';
+import Tea from '../Tea/Tea.container';
 
 import './App.scss';
 
-const App = ({ name, initializeStore, isInitialized }) => (
-  <div>
-    <Helmet
-      titleTemplate="%s - Kettle"
-      defaultTitle="Rivers Agile Kettle Pot"
-      meta={[
-        {
-          name: 'description',
-          content: 'A seed project for creating beautiful things.'
-        }
-      ]}
-    />
-    <p className="class-text">Hello, {name}!</p>
-    <button onClick={() => initializeStore()}>Init</button>
-    <p className="init">{isInitialized ? 'App is inited' : 'App is not inited'}</p>
-  </div>
+const App = () => (
+  <Router>
+    <div>
+      <Helmet
+        titleTemplate="%s - Kettle"
+        defaultTitle="Rivers Agile Kettle Pot"
+        meta={[
+          {
+            name: 'description',
+            content: 'A seed project for creating beautiful things.'
+          }
+        ]}
+      />
+
+      <Navigation />
+
+      <Route exact path="/" render={() => <Home name={'World'} />} />
+      <Route path="/tea" component={Tea} />
+    </div>
+  </Router>
 );
-
-
-App.propTypes = {
-  initializeStore: PropTypes.func.isRequired,
-  name: PropTypes.string,
-  isInitialized: PropTypes.bool
-};
-
-App.defaultProps = {
-  name: 'John',
-  isInitialized: false
-};
 
 export default App;
