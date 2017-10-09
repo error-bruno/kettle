@@ -1,5 +1,7 @@
 # kettle
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/error-bruno/kettle.svg)](https://greenkeeper.io/)
+
 **Get Started**
 ```
 yarn install
