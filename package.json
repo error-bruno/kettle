@@ -58,7 +58,7 @@
     "start": "npm run build && NODE_ENV=production node prodServer"
   },
   "engines": {
-    "node": "5.10.1",
+    "node": "6.1.0",
     "npm": "3.8.7"
   },
   "description": ""

@@ -49,4 +49,4 @@ npm run tests
 
 `npm run lint` and `npm test`
 
-Open http://localhost:8080/
+Open http://localhost:3000/
