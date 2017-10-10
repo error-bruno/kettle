@@ -22,8 +22,6 @@ const promiseMiddleware = ({ dispatch }) => next => (action) => {
   return promise.then(onFulfilled, onRejected);
 };
 
-
-// In future, make sure we only apply middleware to dev
 const logger = createLogger({
   collapsed: true,
   diff: true,

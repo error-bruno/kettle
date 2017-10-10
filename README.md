@@ -23,11 +23,9 @@ npm run Build
 npm run start
 ```
 
-
 ### Tests
 
 We want to strive to make every party of this application testable.
-
 
 **Run Mocha Tests**
 ```
