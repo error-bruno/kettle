@@ -24,7 +24,7 @@ const App = () => (
 
       <Navigation />
 
-      <Route exact path="/" render={() => <Home name={'World'} />} />
+      <Route exact path="/" render={() => <Home name="World" />} />
       <Route path="/tea" component={Tea} />
     </div>
   </Router>

@@ -2,7 +2,12 @@
   "parser"  : "babel-eslint",
   "extends" : ["airbnb"],
   "rules": {
-    "comma-dangle": 0, // The worst rule
+    "jsx-a11y/anchor-is-valid": [ "error", {
+      "components": [ "Link" ],
+      "specialLink": [ "to" ],
+      "aspects": [ "noHref", "invalidHref", "preferButton" ]
+    }],
+    "comma-dangle": 0,
     "default-case": 0,
     "global-require": 0,
     "new-cap": [2, {"capIsNew": false, "newIsCap": true}],
