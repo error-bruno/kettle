@@ -1,11 +1,11 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { expect } from 'chai';
-import Tea from './Tea.container';
+import Teas from './Teas.container';
 
-describe('<Tea />', () => {
+describe('<Teas />', () => {
   it('should have a single h1 tag', () => {
-    const wrapper = shallow(<Tea />);
+    const wrapper = shallow(<Teas />);
     expect(wrapper.find('h1')).to.have.length(1);
   });
 });

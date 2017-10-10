@@ -4,7 +4,7 @@ import Helmet from 'react-helmet';
 
 import Navigation from '../Navigation/Navigation.container';
 import Home from '../Home/Home.container';
-import Tea from '../Tea/Tea.container';
+import Teas from '../Teas/Teas.container';
 
 import './App.scss';
 
@@ -25,7 +25,7 @@ const App = () => (
       <Navigation />
 
       <Route exact path="/" render={() => <Home name="World" />} />
-      <Route path="/tea" component={Tea} />
+      <Route path="/teas" component={Teas} />
     </div>
   </Router>
 );
