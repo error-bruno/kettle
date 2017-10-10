@@ -9,15 +9,15 @@ import configureStore from '../../plumbing/configureStore';
 const store = configureStore();
 
 describe('<HomeContainer />', () => {
-  const wrapper = mount(
+  const wrapper = mount((
     <Provider store={store}>
       <HomeContainer />
     </Provider>
-  );
+  ));
 
-  it('should render correctly', () =>
-    expect(wrapper.find(HomeComponent).find('p.init').text()).to.equal('App is not inited')
-  );
+  it('should render correctly', () => {
+    expect(wrapper.find(HomeComponent).find('p.init').text()).to.equal('App is not inited');
+  });
 
   it('can init the app', () => {
     store.dispatch({
