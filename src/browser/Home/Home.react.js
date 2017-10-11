@@ -11,7 +11,6 @@ const Home = ({ name, initializeStore, isInitialized }) => (
   </div>
 );
 
-
 Home.propTypes = {
   initializeStore: PropTypes.func.isRequired,
   name: PropTypes.string,

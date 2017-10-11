@@ -11,9 +11,13 @@ const store = configureStore();
 describe('<HomeContainer />', () => {
   const wrapper = mount((
     <Provider store={store}>
-      <HomeContainer />
+      <HomeContainer name="mark" />
     </Provider>
   ));
+
+  it('should display a hello message to mark', () => {
+    expect(wrapper.find(HomeComponent).find('p.class-text').text()).to.equal('Hello, mark!');
+  });
 
   it('should render correctly', () => {
     expect(wrapper.find(HomeComponent).find('p.init').text()).to.equal('App is not inited');

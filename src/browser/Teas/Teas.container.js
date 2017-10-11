@@ -1,3 +1,12 @@
+import { connect } from 'react-redux';
 import Teas from './Teas.react';
 
-export default Teas;
+function mapStateToProps(state) {
+  return {
+    teas: state.Teas.get('teas')
+  };
+}
+
+export default connect((
+  mapStateToProps
+))(Teas);

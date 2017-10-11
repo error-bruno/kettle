@@ -1,11 +1,24 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { Provider } from 'react-redux';
+import { mount } from 'enzyme';
 import { expect } from 'chai';
-import Teas from './Teas.container';
+import TeasContainer from './Teas.container';
+import configureStore from '../../plumbing/configureStore';
 
-describe('<Teas />', () => {
+const store = configureStore();
+
+describe('<TeasContainer />', () => {
+  const wrapper = mount((
+    <Provider store={store}>
+      <TeasContainer />
+    </Provider>
+  ));
+
   it('should have a single h1 tag', () => {
-    const wrapper = shallow(<Teas />);
-    expect(wrapper.find('h1')).to.have.length(1);
+    expect(wrapper.find(TeasContainer).find('h1')).to.have.length(1);
+  });
+
+  it('should have a two Tea tags', () => {
+    expect(wrapper.find(TeasContainer).find('Tea')).to.have.length(2);
   });
 });

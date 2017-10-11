@@ -2,7 +2,7 @@ import { expect } from 'chai';
 import { Map } from 'immutable';
 import appReducer from './App.reducer';
 
-describe('App Tests', () => {
+describe('App Reducer Tests', () => {
   it('has initial state', () => {
     const nextState = appReducer();
     expect(nextState).to.equal(Map({
