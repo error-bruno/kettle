@@ -1,4 +1,7 @@
 import { Map } from 'immutable';
+import {
+  ADD_TEA
+} from './Teas.actions';
 
 const initialState = Map({
   teas: [{
@@ -12,6 +15,12 @@ const initialState = Map({
 
 export default function reducer(state = initialState, action = {}) {
   switch (action.type) {
+    case ADD_TEA: {
+      console.log('here')
+      return state
+        .updateIn(['teas'], () => action.payload);
+    }
+
     default:
       return state;
   }

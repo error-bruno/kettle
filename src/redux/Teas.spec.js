@@ -16,3 +16,18 @@ describe('Teas Reducer Tests', () => {
     ));
   });
 });
+
+describe('ADD_TEA', () => {
+  it('adds the tea', () => {
+    const action = {
+      type: 'ADD_TEA',
+      payload: {
+        type: 'Green Tea',
+        description: 'It is Green'
+      }
+    };
+    const nextState = teasReducer(undefined, action);
+
+    expect(nextState.get('teas')).to.deep.equal(action.payload);
+  });
+});
