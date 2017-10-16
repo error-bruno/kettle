@@ -13,9 +13,11 @@ yarn install
 npm run dev
 ```
 
+Open http://localhost:3000/
+
 **Create Production Build**
 ```
-npm run Build
+npm run build
 ```
 
 **Run Production Build**
@@ -47,7 +49,9 @@ npm run sass-lint
 npm run tests
 ```
 
+**Run Storybook**
+```
+npm run storybook
+```
 
-`npm run lint` and `npm test`
-
-Open http://localhost:3000/
+View storybook at: http://localhost:6006/

@@ -16,7 +16,6 @@ const initialState = Map({
 export default function reducer(state = initialState, action = {}) {
   switch (action.type) {
     case ADD_TEA: {
-      console.log('here')
       return state
         .updateIn(['teas'], () => action.payload);
     }
