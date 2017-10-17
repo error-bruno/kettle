@@ -5,7 +5,6 @@
   "author": "Bruno <archangel43@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "@storybook/addon-info": "^3.2.12",
     "enzyme-adapter-react-16": "^1.0.1",
     "express": "^4.14.0",
     "html-webpack-plugin": "^2.26.0",
@@ -25,6 +24,7 @@
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.2.12",
+    "@storybook/addon-info": "^3.2.12",
     "@storybook/addon-links": "^3.2.12",
     "@storybook/react": "^3.2.12",
     "babel-core": "^6.18.2",
@@ -46,6 +46,7 @@
     "ignore-styles": "^5.0.1",
     "jsdom": "^11.3.0",
     "mocha": "^4.0.1",
+    "open-browser-webpack-plugin": "^0.0.5",
     "node-sass": "^4.3.0",
     "react-addons-test-utils": "^15.4.0",
     "react-test-renderer": "^16.0.0",

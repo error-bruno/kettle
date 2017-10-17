@@ -1,3 +1,5 @@
+const OpenBrowserPlugin = require('open-browser-webpack-plugin');
+
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -19,6 +21,7 @@ module.exports = {
       inject: 'body',
       filename: 'index.html'
     }),
+    new OpenBrowserPlugin({ url: 'http://localhost:3000' }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('development')
