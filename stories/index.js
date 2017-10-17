@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { linkTo } from '@storybook/addon-links';
+import { withInfo } from '@storybook/addon-info';
 
 import { Welcome } from '@storybook/react/demo';
 
@@ -19,19 +20,19 @@ const store = configureStore();
 storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
 
 storiesOf('Button', module)
-  .add('default', () => (
+  .add('default', withInfo('This is the default button')(() => (
     <Button
       clickAction={() => store.dispatch(setField(['test'], 'test'))}
       text="Click Me"
     />
-  ))
-  .add('disabled', () => (
+  )))
+  .add('disabled', withInfo('This is a disabled button')(() => (
     <Button
       disabled
       clickAction={action('clicked')}
       text="Can't Click Me"
     />
-  ));
+  )));
 
 storiesOf('Teas', module)
   .addDecorator(getStory => (
@@ -39,9 +40,9 @@ storiesOf('Teas', module)
       { getStory() }
     </Provider>
   ))
-  .add('Teas', () => (
+  .add('Teas', withInfo('This is the Teas iterator')(() => (
     <Teas />
-  ))
-  .add('Tea', () => (
+  )))
+  .add('Tea', withInfo('This is the tea component')(() => (
     <Tea tea={{ type: 'Black', description: 'Here' }} />
-  ));
+  )));
