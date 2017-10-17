@@ -35,7 +35,7 @@
     "chai-immutable": "^1.6.0",
     "css-loader": "^0.28.0",
     "enzyme": "^3.1.0",
-    "eslint": "4.8.0",
+    "eslint": "^4.9.0",
     "eslint-config-airbnb": "^16.0.0",
     "eslint-loader": "1.9.0",
     "eslint-plugin-babel": "4.1.2",
