@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Helmet from 'react-helmet';
 
-import Navigation from '../Navigation/Navigation.container';
+import Navigation from './Navigation/Navigation.container';
 import Home from '../Home/Home.container';
 import Teas from '../Teas/Teas.container';
 

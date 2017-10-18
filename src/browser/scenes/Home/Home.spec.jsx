@@ -4,7 +4,7 @@ import { mount } from 'enzyme';
 import { expect } from 'chai';
 import HomeContainer from './Home.container';
 import HomeComponent from './Home.react';
-import configureStore from '../../plumbing/configureStore';
+import configureStore from '../../../plumbing/configureStore';
 
 const store = configureStore();
 

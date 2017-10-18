@@ -3,7 +3,7 @@ import { mount } from 'enzyme';
 import { expect } from 'chai';
 import { Route } from 'react-router-dom';
 import App from './App.container';
-import Navigation from '../Navigation/Navigation.container';
+import Navigation from './Navigation/Navigation.container';
 
 describe('<App />', () => {
   it('contains a <Navigation /> component', () => {

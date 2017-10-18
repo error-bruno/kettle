@@ -8,12 +8,11 @@ import { withInfo } from '@storybook/addon-info';
 
 import { Welcome } from '@storybook/react/demo';
 
-import Button from '../src/browser/components/Button.container';
-import Teas from '../src/browser/Teas/Teas.container';
-import Tea from '../src/browser/Teas/Tea/Tea.container';
+import Button from '../src/browser/components/Button.react';
+import Teas from '../src/browser/scenes/Teas/Teas.container';
+import Tea from '../src/browser/scenes/Teas/components/Tea.react';
 
 import configureStore from '../src/plumbing/configureStore';
-import { setField } from '../src/redux/redux-fields/fields.actions';
 
 const store = configureStore();
 
@@ -22,7 +21,7 @@ storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo(
 storiesOf('Button', module)
   .add('default', withInfo('This is the default button')(() => (
     <Button
-      clickAction={() => store.dispatch(setField(['test'], 'test'))}
+      clickAction={action('clicked')}
       text="Click Me"
     />
   )))

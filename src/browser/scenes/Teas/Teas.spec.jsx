@@ -3,7 +3,7 @@ import { Provider } from 'react-redux';
 import { mount } from 'enzyme';
 import { expect } from 'chai';
 import TeasContainer from './Teas.container';
-import configureStore from '../../plumbing/configureStore';
+import configureStore from '../../../plumbing/configureStore';
 
 const store = configureStore();
 

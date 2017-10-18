@@ -2,7 +2,8 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
 
-import Tea from './Tea/Tea.container';
+import Tea from './components/Tea.react';
+import Form from './form/form.container';
 
 const Teas = ({ teas }) => (
   <div>
@@ -10,8 +11,9 @@ const Teas = ({ teas }) => (
 
     <h1>Teas</h1>
 
+    <Form />
     {teas.map((tea =>
-      <Tea key={tea.type} tea={tea} />
+      <Tea key={tea.id} tea={tea} />
     ))}
   </div>
 );
