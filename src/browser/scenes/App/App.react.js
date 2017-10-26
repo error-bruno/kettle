@@ -13,7 +13,7 @@ const App = () => (
     <div>
       <Helmet
         titleTemplate="%s - Kettle"
-        defaultTitle="Rivers Agile Kettle Pot"
+        defaultTitle="Kettle Pot"
         meta={[
           {
             name: 'description',
