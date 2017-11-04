@@ -1,7 +1,7 @@
 # kettle
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/error-bruno/kettle.svg)](https://greenkeeper.io/)
-[![Build Status](https://semaphoreci.com/api/v1/errorbruno/kettle/branches/greenkeeper-babel-loader-7-0-0/badge.svg)](https://semaphoreci.com/errorbruno/kettle)
+[![Build Status](https://semaphoreci.com/api/v1/errorbruno/kettle/branches/master/badge.svg)](https://semaphoreci.com/errorbruno/kettle)
 
 **Get Started**
 ```
