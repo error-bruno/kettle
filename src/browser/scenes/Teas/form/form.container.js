@@ -5,8 +5,8 @@ import PropTypes from 'prop-types';
 import shortid from 'shortid';
 
 import { addTea } from '../../../../redux/Teas.actions';
-import TextInput from '../../../components/TextInput.react';
-import Button from '../../../components/Button.react';
+import TextInput from '../../../components/TextInput/TextInput.react';
+import Button from '../../../components/Button/Button.react';
 import Form from '../../../components/Form.react';
 
 export class FormContainer extends React.Component {

@@ -68,7 +68,7 @@
     "build-storybook": "build-storybook"
   },
   "engines": {
-    "node": "6.1.0",
+    "node": "6.9.5",
     "npm": "3.8.7"
   },
   "description": ""

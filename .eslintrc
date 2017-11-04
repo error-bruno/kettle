@@ -22,7 +22,8 @@
             "**/src/plumbing/configureStore.js",
             "**/test/_helper.js",
             "**/*.spec.jsx",
-            "**/*.spec.js"
+            "**/*.spec.js",
+            "**/*.story.js"
           ]
         }
       ]
