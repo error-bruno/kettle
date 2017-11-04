@@ -1,11 +1,8 @@
 import React from 'react';
-import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
 
 const Tea = ({ tea }) => (
   <div>
-    <Helmet title="Tea" />
-
     <h2>{tea.type}</h2>
     <p>{tea.description}</p>
   </div>

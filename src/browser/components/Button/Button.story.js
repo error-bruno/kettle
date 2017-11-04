@@ -10,13 +10,15 @@ storiesOf('Button', module)
   .add('default', withInfo('This is the default button')(() => (
     <Button
       clickAction={action('clicked')}
-      text="Click Me"
-    />
+    >
+      Click Me
+    </Button>
   )))
   .add('disabled', withInfo('This is a disabled button')(() => (
     <Button
       disabled
       clickAction={action('clicked')}
-      text="Can't Click Me"
-    />
+    >
+      {'Can\'t Click Me'}
+    </Button>
   )));

@@ -67,8 +67,9 @@ export class FormContainer extends React.Component {
         />
         <Button
           onClick={() => this.handleSubmit()}
-          text="Add Tea"
-        />
+        >
+          Add Tea
+        </Button>
       </Form>
     );
   }

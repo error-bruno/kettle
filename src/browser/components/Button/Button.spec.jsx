@@ -5,7 +5,7 @@ import Button from './Button.react';
 
 describe('<Button />', () => {
   it('contains the correct text component', () => {
-    const wrapper = mount(<Button text="A Button" />);
+    const wrapper = mount(<Button>A Button</Button>);
     expect(wrapper.find(Button).text()).to.equal('A Button');
   });
 });

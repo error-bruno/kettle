@@ -2,12 +2,15 @@ import Helmet from 'react-helmet';
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import Button from '../../components/Button/Button.react';
+import P from '../../components/P/P.react';
+
 const Home = ({ name, initializeStore, isInitialized }) => (
   <div>
     <Helmet title="Home" />
-    <p className="class-text">Hello, {name}!</p>
-    <button onClick={() => initializeStore()}>Init</button>
-    <p className="init">{isInitialized ? 'App is inited' : 'App is not inited'}</p>
+    <P className="class-text">Hello, {name}!</P>
+    <Button onClick={() => initializeStore()}>Init</Button>
+    <P className="init">{isInitialized ? 'App is inited' : 'App is not inited'}</P>
   </div>
 );
 
