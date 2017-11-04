@@ -7,6 +7,7 @@
   "dependencies": {
     "enzyme-adapter-react-16": "^1.0.1",
     "express": "^4.14.0",
+    "hapi": "^16.6.2",
     "html-webpack-plugin": "^2.26.0",
     "immutable": "^3.8.1",
     "prop-types": "^15.5.8",
@@ -61,7 +62,7 @@
     "lint": "eslint './src/**/*.js' './src/**/*.jsx'",
     "sass-lint": "sass-lint -c ./sass-lint.yml 'src/browser/**/*.scss' -v -q",
     "tests": "npm run test && npm run lint && npm run sass-lint",
-    "dev": "node devServer",
+    "dev": "node devServer & node server.js &",
     "build": "rm -rf dist && NODE_ENV=production webpack --config webpack.config.prod.js --progress --profile --colors",
     "start": "npm run build && NODE_ENV=production node prodServer",
     "storybook": "start-storybook -p 6006",

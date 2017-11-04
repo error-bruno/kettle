@@ -4,6 +4,7 @@ import {
 } from './App.actions';
 
 const initialState = Map({
+  auth: false,
   initialized: false
 });
 

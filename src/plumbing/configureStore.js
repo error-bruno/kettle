@@ -5,6 +5,7 @@ import reducer from '../redux/reducer';
 
 const promiseMiddleware = ({ dispatch }) => next => (action) => {
   const { type, payload: promise } = action;
+  console.log(typeof promise);
   const isPromise = promise && typeof promise.then === 'function';
   if (!isPromise) return next(action);
   const createAction = (suffix, payload) => ({
