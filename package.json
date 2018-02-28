@@ -7,7 +7,7 @@
   "dependencies": {
     "enzyme-adapter-react-16": "^1.0.1",
     "express": "^4.14.0",
-    "html-webpack-plugin": "^2.26.0",
+    "html-webpack-plugin": "^3.0.0",
     "immutable": "^3.8.1",
     "prop-types": "^15.5.8",
     "react": "^16.0.0",
