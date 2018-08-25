@@ -5,7 +5,7 @@
   "author": "Bruno <archangel43@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "enzyme-adapter-react-16": "^1.0.1",
+    "enzyme-adapter-react-16": "^1.2.0",
     "express": "^4.14.0",
     "html-webpack-plugin": "^2.26.0",
     "immutable": "^3.8.1",
