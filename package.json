@@ -30,7 +30,7 @@
     "@storybook/react": "^3.2.12",
     "babel-core": "^6.18.2",
     "babel-eslint": "8.2.4",
-    "babel-loader": "^7.1.2",
+    "babel-loader": "^8.0.4",
     "babel-preset-airbnb": "^2.4.0",
     "chai": "^4.1.2",
     "chai-immutable": "^1.6.0",
