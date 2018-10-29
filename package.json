@@ -24,10 +24,10 @@
     "webpack-dev-server": "^2.4.2"
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^3.2.12",
-    "@storybook/addon-info": "^3.2.12",
-    "@storybook/addon-links": "^3.2.12",
-    "@storybook/react": "^3.2.12",
+    "@storybook/addon-actions": "^4.0.0",
+    "@storybook/addon-info": "^4.0.0",
+    "@storybook/addon-links": "^4.0.0",
+    "@storybook/react": "^4.0.0",
     "babel-core": "^6.18.2",
     "babel-eslint": "8.2.4",
     "babel-loader": "^7.1.2",
