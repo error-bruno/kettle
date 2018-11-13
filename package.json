@@ -16,7 +16,7 @@
     "react-redux": "^5.0.2",
     "react-router": "4.2.0",
     "react-router-dom": "^4.1.1",
-    "react-test-renderer": "16",
+    "react-test-renderer": "^16.6.2",
     "redux": "^3.6.0",
     "redux-thunk": "^2.2.0",
     "shortid": "^2.2.8",
