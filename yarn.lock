@@ -1966,9 +1966,10 @@ center-align@^0.1.1:
     align-text "^0.1.3"
     lazy-cache "^1.0.3"
 
-chai-immutable@^1.6.0:
-  version "1.6.0"
-  resolved "https://registry.yarnpkg.com/chai-immutable/-/chai-immutable-1.6.0.tgz#9ec00bdd67948b13b20fcbb89cbf4af2ce6f9247"
+chai-immutable@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/chai-immutable/-/chai-immutable-2.1.0.tgz#c407008c22e1292ef6bb2e4b80fc4968264e430d"
+  integrity sha512-IQrtwbwQYn2tkw/BOL+xYhJMcwuil1w0dzv9nZqi/w+jdQhdAn9rDyJb3qK+LvZkctJqdvy6opALGFZcdriW7A==
 
 chai@^4.1.2:
   version "4.1.2"
